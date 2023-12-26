@@ -1,4 +1,4 @@
-# BUBU_Website
+<img width="945" alt="截圖 2023-11-26 下午6 30 36" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/dbc13c4a-2ee2-48da-8189-d7edb67d0982"># BUBU_Website
 This is a Flask website hosting on GCP, designed with Bootstrap.
 
 # Hosting a Flask Web on GCP for Free
@@ -29,22 +29,22 @@ As of 2023/11/26, GCP offers monthly free Compute Engine e2-micro Instance in th
 
 I put my Ubuntu in us-west1-c, using e2-micro + 30GB standard(Please remember to change your storage type). You could also install WordPress directly from Marketplace, remember to set the spec to cater to free tier.  
 You should enable HTTP and HTTPS lest Let's Encrypt couldn't connect to your isntance.
-<img width="1122" alt="截圖 2023-11-26 下午5 08 04" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/e348c04c-1a34-47f5-87f3-1b15793b9a31">
-<img width="1123" alt="截圖 2023-11-26 下午5 07 24" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/46c6b554-0f19-4d58-a1fd-4962df5880d5">
+<img width="1122" alt="截圖 2023-11-26 下午5 08 04" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/e348c04c-1a34-47f5-87f3-1b15793b9a31">  
+<img width="1123" alt="截圖 2023-11-26 下午5 07 24" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/46c6b554-0f19-4d58-a1fd-4962df5880d5">  
 
 # 2. SSH into your instance
 At your ~$ (which default to be your google account name) you could put your files here. I had put my flask here.
-<img width="331" alt="285642387-1cd3bd08-f383-4fa1-8412-16280ef3e118" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/af39c018-9dc4-4c12-9e04-90ffe077df79">
+<img width="331" alt="285642387-1cd3bd08-f383-4fa1-8412-16280ef3e118" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/9e003a66-e183-4430-89f0-ed3177b2e659">  
 
 # 3. Setup your Flask
 In order to use pip  
 ```sudo apt update```
 ```sudo apt install python3-pip```
-<img width="979" alt="截圖 2023-11-26 下午5 47 33" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/3d1eddcd-7df3-4bbc-ae4f-913bfdedd075">
-<img width="1453" alt="截圖 2023-11-26 下午5 48 05" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/6ff93edd-ee6e-4dc8-a779-33215a88469e">
+<img width="979" alt="截圖 2023-11-26 下午5 47 33" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/3d1eddcd-7df3-4bbc-ae4f-913bfdedd075">  
+<img width="1453" alt="截圖 2023-11-26 下午5 48 05" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/6ff93edd-ee6e-4dc8-a779-33215a88469e">  
 
 ```sudo pip3 install Flask```  
-<img width="301" alt="截圖 2023-11-26 下午5 52 05" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/aa898fea-bbee-40b5-b63f-8ea8d3dccda2">
+<img width="301" alt="截圖 2023-11-26 下午5 52 05" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/aa898fea-bbee-40b5-b63f-8ea8d3dccda2">  
 
 Add file in ~$
 ```python
@@ -66,7 +66,7 @@ We are going to use NGINX to reverse proxy.
 # 4. NGINX opening port 80/443
 ## 4.1 Install NGINX  
 ```sudo apt update && sudo apt install nginx```  
-<img width="895" alt="截圖 2023-11-26 下午6 16 21" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/99fe3dcf-6dba-4640-b030-47140478921d">  
+<img width="895" alt="截圖 2023-11-26 下午6 16 21" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/cf82cedb-2273-4636-b40d-28bfa086b6ad">  
 
 ## 4.2 Open Ubuntu FireWall to allow Nginx control  
 ```
@@ -75,7 +75,7 @@ sudo ufw app list
 sudo ufw allow OpenSSH
 sudo ufw allow 'Nginx Full'
 ```
-<img width="633" alt="截圖 2023-11-26 下午6 21 45" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/baf3a5eb-688c-4669-a3f6-323705e9ed1b">  
+<img width="633" alt="截圖 2023-11-26 下午6 21 45" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/043a716d-f12d-4333-8496-d7856863926c">  
   
 To check if NGINX is active. Also, you can now enter your ip to directly get NGINX welcome page  
 ```systemctl status nginx```  
@@ -83,7 +83,7 @@ To check if NGINX is active. Also, you can now enter your ip to directly get NGI
 
 ## 4.3 Configure NGINX
 The site file is stored in "sites-available", we are going to creat a file for my web and link it to "sites-enabled", thus Let's Encrypt could get our domain informations.  
-<img width="945" alt="截圖 2023-11-26 下午6 30 36" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/ee042b6f-a1ac-4af4-a5f0-1580863228a9">  
+<img width="945" alt="截圖 2023-11-26 下午6 30 36" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/ffabd655-9e64-48a4-9d27-f04d2031acb2">  
   
 **Remember to point your domain DNS to your server in advance.**  
 Listen to port 80 (Default port) ; Server_name is your domain ; Later we will use Let's Encrypt to set the NGINX ports.
@@ -94,7 +94,7 @@ server {
 }
 ```
 <img width="1470" alt="截圖 2023-11-26 下午6 54 54" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/6f4e5522-4433-49b2-aef7-8590112ababa">  
-<img width="948" alt="截圖 2023-11-26 下午6 58 00" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/44cb67b2-3278-431c-8ec2-3e75a5ebca7f">
+<img width="948" alt="截圖 2023-11-26 下午6 58 00" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/850b51c9-565a-4458-8e6b-47cb9aafe0e0">  
 
 ## 4.4 Link your configuration from available to enabled.  
 ```sudo ln -s /etc/nginx/sites-available/my_test_website.com /etc/nginx/sites-enabled/```  
@@ -106,7 +106,7 @@ Remove the failed link with
 ---
 ## 4.5 Restart NGINX, and you should be able to enter your web with your domain.  
 ```sudo systemctl restart nginx```
-<img width="788" alt="截圖 2023-11-26 下午7 17 04" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/ecaea5d1-8c5f-421a-ae32-61bb781add54">
+<img width="788" alt="截圖 2023-11-26 下午7 17 04" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/29d845ec-6378-4167-a73d-23422b3ab61e">  
 
 # 5. Let's Encrypt w/ certbot
 https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal  
@@ -117,11 +117,11 @@ Follow the instruction from official website, in my case, I'm using NGINX with U
 ```sudo ln -s /snap/bin/certbot /usr/bin/certbot```  
 ## 5.3 Get certificate  
 ```sudo certbot --nginx```  
-<img width="832" alt="截圖 2023-11-26 下午7 26 45" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/5efe7e99-5fc3-432a-9d46-0e0807df9b0a">
+<img width="832" alt="截圖 2023-11-26 下午7 26 45" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/8d6e6f3a-d9ac-4976-a495-4d0f12fefde7">  
 
 We could see that the previous my_test_website.com has been revised by certbot, with new lines with # in the end. It first redirect 80 port to 443 port, or return 404 for 80  
 <img width="1470" alt="截圖 2023-11-26 下午7 32 24" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/42b403ba-1709-4b8c-be4b-d54cf5b73739">
-<img width="723" alt="截圖 2023-11-26 下午7 37 43" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/3a9247f4-dc11-4a75-ba0b-42f46ef5d211">
+<img width="723" alt="截圖 2023-11-26 下午7 37 43" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/41dfda42-5da7-49ce-a225-bf0b17f0dd3c">
 
 # 6. Using Gunicorn to run flask
 ## 6.1 Adding NGINX reverse proxy
@@ -147,7 +147,7 @@ Route to where your app.py locate
 ```cd ~/```  
 Run Gunicorn with 3 workers binding port 5050  
 ```gunicorn --workers 3 --bind 127.0.0.1:5050 app:app```  
-<img width="683" alt="截圖 2023-11-26 下午8 57 03" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/7ffabea7-28a4-4258-aeab-aa2f67d10851">
+<img width="683" alt="截圖 2023-11-26 下午8 57 03" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/83b12840-bdc5-4470-809b-b030bec24ea4">
 <img width="1470" alt="test_success" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/f4a7d2b5-f4c8-4352-a472-07b025285939">
 
 
@@ -171,7 +171,7 @@ ExecStart=/usr/local/bin/gunicorn --workers 3 --bind 127.0.0.1:5050 app:app
 [Install]
 WantedBy=multi-user.target
 ```
-<img width="1470" alt="截圖 2023-11-26 下午9 05 01" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/64c97470-d810-485f-aed1-0ad39c481fef">  
+<img width="1470" alt="截圖 2023-11-26 下午9 05 01" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/805b1953-c1f3-4548-b890-52dc581daa3c">  
 
 # Conclusion, start your flask using systemctl
 ```sudo systemctl start my_web.service``` To start  
@@ -179,7 +179,7 @@ WantedBy=multi-user.target
 ```sudo systemctl status my_web.service``` To see status  
 ```sudo systemctl enable my_web.service``` To make it auto run after start the server  
 If you edit the .service file, you should always ```sudo systemctl daemon-reload```  
-<img width="997" alt="截圖 2023-11-26 下午9 14 17" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/87f234c2-0c07-4348-a110-6b079f3bf55d">
+<img width="997" alt="截圖 2023-11-26 下午9 14 17" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/346300cc-9812-4a63-8641-98916caca0a4">  
 
 ## Increasing your security with block directly entering from ip
 **If you would like to remove default Welcome to NGINX page. This will also disable entering directly from ip, increasing safety of the website**
@@ -226,7 +226,7 @@ Host SSH_to_test_GCP
 
 ## e.3 Make a key  
 ```ssh-keygen -t rsa -f remote-ssh-demo -C YOUR_USERNAME_IN_SERVER -b 2048```  
-<img width="1021" alt="截圖 2023-11-26 下午9 35 30" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/6b4b9ec3-a4fa-4596-b24d-516c3364311f">  
+![截圖 2023-11-26 下午9 35 30](https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/5df26235-21fd-45a6-9bfb-170e875aff8a)  
 Get the public key  
 ```cat keyname.pub```  
 Remember to put your key to where IdentityFile points to.  
