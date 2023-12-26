@@ -78,7 +78,6 @@ sudo ufw allow 'Nginx Full'
   
 To check if NGINX is active. Also, you can now enter your ip to directly get NGINX welcome page  
 ```systemctl status nginx```  
-<img width="774" alt="截圖 2023-11-26 下午6 27 31" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/33090ac6-3617-4639-9025-4cbf998263ac">
 
 ## 4.3 Configure NGINX
 The site file is stored in "sites-available", we are going to creat a file for my web and link it to "sites-enabled", thus Let's Encrypt could get our domain informations.  
