@@ -1,4 +1,5 @@
-# This is a Flask website hosting on GCP, designed with Bootstrap.
+# This is a Flask website now hosting on GCP using WordPress Certified by Bitnami and Automattic, designed with Bootstrap.
+LIVE on http://bs.ridebubu.com
 
 # Hosting a Flask Web on GCP for Free
 This is a working Official Website running on GCP with Ubuntu. Flask, Gunicorn, NGINX, Let's Encrypt SSL used in backend. Frontend using Bootstrap, Javascript, CSS and HTML.
