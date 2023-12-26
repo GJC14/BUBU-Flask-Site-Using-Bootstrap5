@@ -40,11 +40,11 @@ At your ~$ (which default to be your google account name) you could put your fil
 In order to use pip  
 ```sudo apt update```
 ```sudo apt install python3-pip```
-<img width="979" alt="截圖 2023-11-26 下午5 47 33" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/357a65a4-dc32-4970-b170-605c240343a8">
-<img width="1453" alt="截圖 2023-11-26 下午5 48 05" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/7386f91d-582d-4e6f-aa70-4d63267f9b87">  
+<img width="979" alt="截圖 2023-11-26 下午5 47 33" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/3d1eddcd-7df3-4bbc-ae4f-913bfdedd075">
+<img width="1453" alt="截圖 2023-11-26 下午5 48 05" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/6ff93edd-ee6e-4dc8-a779-33215a88469e">
 
 ```sudo pip3 install Flask```  
-<img width="301" alt="截圖 2023-11-26 下午5 52 05" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/f851668f-9eb7-4319-ba89-21b520a8c42b">
+<img width="301" alt="截圖 2023-11-26 下午5 52 05" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/aa898fea-bbee-40b5-b63f-8ea8d3dccda2">
 
 Add file in ~$
 ```python
