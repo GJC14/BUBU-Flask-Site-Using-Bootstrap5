@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %} Instructions {% endblock %}
+
+{% block content %}
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1>How to BUBU</h1>
+</div>
+
+<div class="d-flex align-items-center py-3">
+  <div class="flex-shrink-0 pe-3">
+    <img src="{{ url_for('static', filename='images/op_area.png') }}" alt="Operating Area" style="width:25vw" class="bubu-border-radius">
+  </div>
+  <div class="flex-grow-1 ms-3">
+    <h5>Step 1 — 掃描 QR code</h5>
+    <p>找到電動滑板車，掃描顯示面板旁的 QR Code，在 LINE 中取得「BUBU E-Scooter」官方帳號傳送的借用資訊，點擊「解鎖 BUBU」。第一次借用請詳細閱讀「使用手冊」及「安全守則」，並填寫嘗試問卷。</p>
+  </div>
+</div>
+
+<div class="d-flex align-items-center py-3">
+  <div class="flex-shrink-0 pe-3">
+    <img src="{{ url_for('static', filename='images/op_area.png') }}" alt="Operating Area" style="width:25vw" class="bubu-border-radius">
+  </div>
+  <div class="flex-grow-1 ms-3">
+    <h5>Step 2 — Check, Hop on et Go</h5>
+    <p>確保煞車正常運作後，放加速器，一腳輕輕地踩在滑板車的踏板上，一腳推動地面以加速到 3km/h。這時按下右手邊的加速器，放鬆心情讓 BUBU 帶你飛。</p>
+  </div>
+</div>
+
+<div class="d-flex align-items-center py-3">
+  <div class="flex-shrink-0 pe-3">
+    <img src="{{ url_for('static', filename='images/op_area.png') }}" alt="Operating Area" style="width:25vw" class="bubu-border-radius">
+  </div>
+  <div class="flex-grow-1 ms-3">
+    <h5>Step 3 — 當個安全的 Rider</h5>
+    <p>隨時注意路況及行人，雙腳站穩保持平行，建議微踮腳尖減少車輛晃動，雙手放鬆自然下垂，並抓緊把手，遇到坑洞時重心壓低。行人永遠擁有最高路權，請禮讓行人，並遵守號誌，僅行駛在車道邊或腳踏車專用道。</p>
+  </div>
+</div>
+
+<div class="d-flex align-items-center py-3">
+  <div class="flex-shrink-0 pe-3">
+    <img src="{{ url_for('static', filename='images/op_area.png') }}" alt="Operating Area" style="width:25vw" class="bubu-border-radius">
+  </div>
+  <div class="flex-grow-1 ms-3">
+    <h5>Step 4 — 找到 BUBU 專用停車位還車</h5>
+    <p>您可以查看 LINE 上的還車地點圖，將車輛停在合格區域內，並確保停放的位置不會影響其他交通工具或行人的通行。在 LINE 中點擊「還車」，並依照指示完成付款，開心的話也請您透過回饋問卷告訴 BUBU 您的想法！</p>
+  </div>
+</div>
+
+
+
+<div class="px-4 py-5 my-5 text-center bubu-yellow-bg bubu-border-radius">
+  <h1>Who Can Ride BUBU?</h1>
+  <div class="col-lg-6 pt-3 mx-auto">
+    <p class="m-0">According to BUBU Terms of Use, you must be 16+ years old, and pass the test of E-Scooter Riding Principle hold by BUBU Co., LTD on BUBU E-Scooter LINE Official Account.</p>
+  </div>
+</div>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1>Riding Zone</h1>
+  <div class="container">
+    <div class="row pt-5">
+
+      <div class="col-4">
+        
+        <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/op_area.png') }}" alt="Operating Area">
+        <h4 class="pt-3 my-2">營運範圍</h4>
+        <p class="mt-1">在這邊您可以自由穿梭，不過行進過程中請隨時注意行人及車輛，並遵守交通規則。​</p>
+      
+      </div>
+
+      <div class="col-4">
+
+        <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/parking_area.png') }}" alt="Parking Area">
+        <h4 class="pt-3 my-2">停車範圍</h4>
+        <p class="mt-1">請務必將車輛停放於 BUBU 規劃的停車區域，並比照腳踏車停放方法，保持區域整潔，並確保您沒有阻擋行人、車輛出入。​</p>
+      
+      </div>
+
+      <div class="col-4">
+
+        <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/pedestrian_area.png') }}" alt="Pedestrian Area">
+        <h4 class="pt-3 my-2">步行區域</h4>
+        <p class="mt-1">請尊重行人用路權，此區域禁止通行。</p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1>Acceptable Parking</h1>
+  <div class="row pt-5">
+
+    <div class="col px-2">
+
+      <img style="object-fit: cover; height:30vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/op_area.png') }}" alt="Operating Area">
+      <h4 class="pt-3 my-2">停放在停車區域內</h4>
+      <p class="mt-1">BUBU 有規劃特定停車區域，您需要找到這些地方停放。​</p>
+    
+    </div>
+
+    <div class="col px-2">
+
+      <img style="object-fit: cover; height:30vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/parking_area.png') }}" alt="Parking Area">
+      <h4 class="pt-3 my-2">使用中柱</h4>
+      <p class="mt-1">找到安全地方後請立中柱，以免躺著的 BUBU 佔據太多空間。​</p>
+    
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

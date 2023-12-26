@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+  <h1>{% block title %} Safety {% endblock %}</h1>
+  <div class="row pt-5">
+
+    <div class="col px-3">
+
+      <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/op_area.png') }}" alt="Operating Area">
+      <h4 class="pt-3 my-2">16 歲以上</h4>
+      <p class="mt-1">Bla bla bla​</p>
+    
+    </div>
+
+    <div class="col px-3">
+
+      <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/parking_area.png') }}" alt="Parking Area">
+      <h4 class="pt-3 my-2">No Alcohol</h4>
+      <p class="mt-1">Bla bla bla​</p>
+    
+    </div>
+
+    <div class="col px-3">
+
+      <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/pedestrian_area.png') }}" alt="Pedestrian Area">
+      <h4 class="pt-3 my-2">嚴禁雙載</h4>
+      <p class="mt-1">Bla bla bla</p>
+    
+    </div>
+  </div>
+</div>
+{% endblock %}

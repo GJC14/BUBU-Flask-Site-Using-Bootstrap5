@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %} {% endblock %} - BUBU E-Scooter | Forging Green Better World</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--SEO-->
+    <meta name="description" content="BUBU E-Scooter | Sharing Micromobility/E-Scooter Startup in Taiwan"/>
+    {% block meta %} {% endblock%}
+    
+    <!--Bootstrap5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!--Google Fonts-->
+    <!--Google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+    body {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    img {
+        max-width: 100%;
+    }
+    button {
+        background-color: #f5df4d;
+        color: black;
+        border-radius: 25rem;
+        border: none;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        transition: 300ms;
+    }
+    button:hover {
+        background-color: black;
+        color: white;
+    }
+    .bubu-border-radius {
+        border-radius: 1.5rem;
+    }
+    .bubu-yellow {
+        color: #f5df4d;
+    }
+    .bubu-yellow-bg {
+        background-color: #f5df4d;
+    }
+    .bubu-blue {
+        color: #00589b;
+    }
+    .bubu-blue-bg {
+        background-color: #00589b;
+    }
+    </style>
+
+</head>
+<body>
+
+<header>
+{# include header #}
+{% include 'default_header.html' %} 
+</header>
+
+<div class="container">
+    {% block content %} <!-- child templates such as home/about/company --> {% endblock %}
+</div>
+
+<footer>
+{# include footer #}
+{% include 'default_footer.html' %}
+</footer>
+
+</body>
+</html>

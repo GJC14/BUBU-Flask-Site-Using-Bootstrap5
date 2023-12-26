@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Vehicles {% endblock %}</h1>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1>This is BUBU</h1>
+
+  <div class="row pt-5 align-items-center">
+    <div class="col px-2">
+      <img style="object-fit: cover; height:30vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/dalle/BUBU-V1_by_DALLE.png') }}" alt="BUBU V1">
+      <p class="mt-1">BUBU V1 by DALL · E​</p>
+    </div>
+
+    <div class="col px-2 text-center">
+      <p class="mt-1">最 Safe 的下坡速度維持系統​</p>
+      <p class="mt-1">Sail Up to 45km on 1 Charge​</p>
+      <p class="mt-1">10" 大前輪！​</p>
+      <p class="mt-1">前後雙煞車 + EABS 智慧電子煞車​</p>
+      <p class="mt-1">立柱好停，安全又不佔位​</p>
+      <p class="mt-1">We use LINE to Save Your Desktop & Storage​</p>
+      <p class="mt-1">置杯架 & 文件夾​</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+{% endblock %}

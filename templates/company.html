@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %} Company {% endblock %}
+
+{% block content %}
+<img src="{{ url_for('static', filename='images/company_banner.jpeg') }}" class="img-fluid" alt="Company Banner">
+
+<div class="container text-center px-1 px-lg-5 py-5">
+  <div class="row py-5 my-5 justify-content-center">
+    <div class="col-11 col-lg-6">
+      <h1 class="py-3">關於 BUBU E-Scooter</h1>
+      <p>BUBU E-Scooter（步同步移動股份有限公司｜統一編號：93770828）致力於提供省電省力的新型交通工具 — 電動滑板車，我們重視使用者體驗、車輛安全，以及碳足跡。為達成這三項目標，BUBU 重視本土供應鏈以減少運輸碳排放；提供 12″ 大輪圈、實體避震器、寬踏板、長續航車款確保車輛穩定耐久；使用 LINE 作為媒介降低使用、維護門檻，也因此能以較具競爭力的費率回饋每位使用者。</p>
+    </div>
+  </div>
+
+  <div class="row py-5 my-5">
+    <div class="col-6 col-lg-6 px-5">
+      <h1 class="py-3">Our Vision</h1>
+      <p>我們致力於推廣自主的生活模式、永續環境，以及地方連結，BUBU 透過高品質的綠色交通運輸工具，在庸碌的世界中，帶每個靈魂深入大街小巷、上山下海，認識山海、認識另個靈魂，掌握自己的生活；認識自己的社區、城市、國家，深化本土連結。活化地方、陪伴您的輕快生活，並創造可持續的商業模式，</p>
+    </div>
+
+    <div class="col-6 col-lg-6 px-5">
+      <h1 class="py-3">Our Mission</h1>
+      <p>BUBU 提供安全、環保、堅固、耐用的電動滑板車，透過 LINE 官方帳號，提供簡便的借還車系統，不僅大幅降低數據使用，也讓整個流程迅速流暢有效率。</p>
+    </div>
+  </div>
+
+  <div class="row py-5 my-5 justify-content-center">
+    <div class="col-11 col-lg-6">
+      <h1 class="py-3">Our Strength & Our Remarkable Team</h1>
+      <p>得利於台灣長久耕耘、在世界上頗具競爭力的腳踏車及馬達供應鏈，BUBU V1 電動滑板車具有耐久車體，以及長達 10 年保固，且極具能源效率的馬達，大幅拉長使用年限並減少能源浪費，相較於捷運、電動公車，BUBU 每人每公里僅消耗 0.14 度電，減少超過 30% 能源浪費。</p>
+      <p>在 BUBU，我們提供自由的工作環境，除了硬體相關職位，包含行銷、客戶維護，以及軟體維護，都是 Forever Work From Home，並有優渥的員工認股權。</p>
+      <!-- Button trigger modal -->
+      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Apply Now!
+      </button>
+    </div>
+
+  </div>
+
+  <div class="row py-5 my-5 justify-content-center border-top">
+    <div class="col-11 col-lg-6">
+      <h1 class="py-3">BUBU @NCCU</h1>
+      <iframe src="https://bot.ridebubu.com/map" style="height:100vh">
+        你的瀏覽器不支援 iframe
+      </iframe>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Get Involved</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

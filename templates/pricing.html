@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container px-4 py-5 text-center">
+    <h1>{% block title %} Fair Pricing Plan {% endblock %}</h1>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 border-0 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
+            <h2 class="mt-5 mb-4 display-6 lh-1 fw-bold">STANDARD</h2>
+            <p><strong>Students –––––– $2/Minute</strong></p>
+            <p>＊NCCU Privilege</p>
+            <p><strong>Basic –––––– $3/Minute</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bubu-yellow-bg rounded-5 border-0 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 text-black text-shadow-1">
+            <h2 class="mt-5 mb-4 display-6 lh-1 fw-bold">STUDENT VIP</h2>
+            <p><strong>$200/Mo</strong></p>
+            <p>First 100 Minutes FREE, then $1.5/Minute</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bubu-blue-bg rounded-5 border-0 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
+            <h2 class="mt-5 mb-4 display-6 lh-1 fw-bold">VIP</h2>
+            <p><strong>$300/Mo</strong></p>
+            <p>First 100 Minutes FREE, then $2.5/Minute</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1>Pay the Bill</h1>
+  <div class="container">
+    <div class="row pt-5">
+
+      <div class="col-4">
+        
+        <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/dalle/Pay_the_Bill_by_DALLE.png') }}" alt="Get the Bill">
+        <h4 class="pt-3 my-2">取得帳單</h4>
+        <p class="mt-1">騎乘結束後，BUBU 會自動計算旅程金額，透過 LINE 發送付款帳單及連結給您。​</p>
+      
+      </div>
+
+      <div class="col-4">
+
+        <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/logo_square_yellow.png') }}" alt="Paying">
+        <h4 class="pt-3 my-2">在 LINE 內付款</h4>
+        <p class="mt-1">您可以選擇使用 LINE Pay、信用卡、Apple Pay、Google Pay，點擊連結後會開啟付款頁面。​</p>
+      
+      </div>
+
+      <div class="col-4">
+
+        <img style="object-fit: cover; height:20vw" class="bubu-border-radius" src="{{ url_for('static', filename='images/dalle/Pay_the_Bill_by_DALLE.png') }}" alt="Receiving Invoice">
+        <h4 class="pt-3 my-2">收取發票</h4>
+        <p class="mt-1">BUBU 確認收款後，將自動開立發票給您，發票可以選擇存入手機載具，或是捐贈給社福機關。</p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

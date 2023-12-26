@@ -1,0 +1,80 @@
+<div class="container-fluid">
+  <header class="d-flex flex-wrap justify-content-center pb-3 mb-3 mx-1 mx-md-5 border-bottom">
+    <a href="{{ url_for('home') }}" class="d-flex align-items-center mb-md-0 me-md-auto px-3 pt-3 link-body-emphasis text-decoration-none">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" height="32px" alt="Logo">
+    </a>
+
+    <ul class="nav nav-pills pt-3">
+      <li class="nav-item align-self-center px-3">
+        <div class="dropdown-center">
+          <button class="btn px-5 pt-2 rounded-pill" style="--bs-btn-bg: #f5df4d; --bs-btn-hover-bg: #f0eee9; --bs-btn-active-bg: #f0eee9;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Get BUBU</strong>
+          </button>
+          <ul class="dropdown-menu p-1 my-0 border-0 shadow">
+            <div class="text-center">
+              <img src="https://ridebubu.com/wp-content/uploads/2023/09/BUBU-LINE-Official.png" class="img-fluid " alt="BUBU LINE OA QR Code">
+            </div>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item dropdown-center align-self-center px-3">
+        <a class="nav-link p-0 d-flex" data-bs-toggle="dropdown" href="#">
+          <span class="material-symbols-outlined" style="color: black; font-size: 2rem;">
+            language
+          </span>
+        </a>
+        <ul class="dropdown-menu border-0 shadow" style="--bs-dropdown-min-width: 5rem;">
+          <li><a class="dropdown-item" href="https://yourdomain.com">中文</a></li>
+          <li><a class="dropdown-item" href="https://en.yourdomain.com">English</a></li>
+          <li><a class="dropdown-item" href="https://es.yourdomain.com">Español</a></li>
+          <li><a class="dropdown-item" href="https://fr.yourdomain.com">Français</a></li>
+          <li><a class="dropdown-item" href="https://de.yourdomain.com">Deutsch</a></li>
+        </ul>
+      </li>
+      <li class="nav-item align-self-center px-3">
+        <a class="nav-link p-0 d-flex" data-bs-toggle="offcanvas" data-bs-target="#sidebar-popend" href="#">
+          <span class="material-symbols-outlined" style="color: black; font-size: 2rem;">
+            lunch_dining
+          </span>
+        </a>
+      </li>
+    </ul>
+  </header>
+</div>
+
+<!--Off Canvas Sidebar-->
+<div class="offcanvas offcanvas-end px-3" id="sidebar-popend" style="--bs-offcanvas-width: auto;">
+  <div class="offcanvas-header">
+    <a href="/" class="py-3">
+      <img src="https://ridebubu.com/wp-content/uploads/2023/09/LOGO定稿_黃底黑字_MuseoModerno_Black-1-300x75.png" height="28" alt="Logo">
+    </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" style="padding-right: 10vw;">
+
+    <h5 class="pt-4 pb-1">Products & Services</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item mb-2"><a href="{{ url_for('vehicles') }}" class="nav-link p-0 text-body-secondary">車輛</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('pricing') }}" class="nav-link p-0 text-body-secondary">收費方式</a></li>
+    </ul>
+    
+    <h5 class="pt-4 pb-1">Ride</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item mb-2"><a href="{{ url_for('instructions') }}" class="nav-link p-0 text-body-secondary">如何騎 BUBU</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('safety') }}" class="nav-link p-0 text-body-secondary">安全須知</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('sustainability') }}" class="nav-link p-0 text-body-secondary">永續環境</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('insurance') }}" class="nav-link p-0 text-body-secondary">保險</a></li>
+    </ul>
+
+    <h5 class="pt-4 pb-1">Resources</h5>
+    <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#FAQModal" data-bs-whatever="@mdo">FAQ</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#FAQModal" data-bs-whatever="@fat">Feedback</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('company') }}" class="nav-link p-0 text-body-secondary">公司介紹</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('privacy_policy') }}" class="nav-link p-0 text-body-secondary">隱私權政策</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('user_agreement') }}" class="nav-link p-0 text-body-secondary">使用者合約</a></li>
+      <li class="nav-item mb-2"><a href="{{ url_for('refund_policy') }}" class="nav-link p-0 text-body-secondary">退款政策</a></li>
+    </ul>
+  </div>
+</div>
+

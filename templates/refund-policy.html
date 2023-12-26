@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="pt-5 my-5">
+  <h1 class="text-center">{% block title %}退款政策{% endblock %}</h1>
+</div>
+
+<div class="col-11 col-lg-6 pt-3 pb-5 mx-auto">
+  <p>BUBU E-Scooter 退款方式說明：</p>
+  <p>匯款退費：請寄送電子郵件至 <a href="mailto:contact@ridebubu.com"> contact@ridebubu.com</a>，須提供銀行帳戶相關資訊（包含銀行名稱、分行名稱、銀行帳號、戶名）。</p>
+  <p>作為一項<a herf='{{ url_for('user_agreement') }}'>政策</a>，除非適用法律要求，否則我們不會為您使用我們的服務提供退款，且本政策的任何例外情況均由我們保留最終解釋權。</p>
+
+</div>
+
+{% endblock %}

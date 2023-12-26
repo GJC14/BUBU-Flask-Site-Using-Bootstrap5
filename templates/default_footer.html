@@ -1,0 +1,77 @@
+<div class="container-fluid">
+<footer class="row py-5 my-5 mx-1 mx-md-5 border-top">
+    <div class="col-12 col-md-5 mb-3">
+      <div class="row">
+        <div class="col-6 col-md-12">
+          <a href="{{ url_for('home') }}" class="d-flex align-items-center mt-1 mb-5 mx-3 link-body-emphasis text-decoration-none">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" height="32px" alt="Logo">
+          </a>
+        </div>
+
+        <div class="col">
+          <p class="text-body-secondary mt-0 mt-md-3 mb-1">Designed by © BUBU E-Scooter</p>
+          <p class="text-body-secondary">2023 Fall in Taipei</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h5>Products & Services</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="{{ url_for('vehicles') }}" class="nav-link p-0 text-body-secondary">車輛</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('pricing') }}" class="nav-link p-0 text-body-secondary">收費方式</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h5>Ride</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="{{ url_for('instructions') }}" class="nav-link p-0 text-body-secondary">如何騎 BUBU</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('safety') }}" class="nav-link p-0 text-body-secondary">安全須知</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('sustainability') }}" class="nav-link p-0 text-body-secondary">永續環境</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('insurance') }}" class="nav-link p-0 text-body-secondary">保險</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h5>Resources</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#FAQModal" data-bs-whatever="@mdo">FAQ</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#FAQModal" data-bs-whatever="@fat">Feedback</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('company') }}" class="nav-link p-0 text-body-secondary">公司介紹</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('privacy_policy') }}" class="nav-link p-0 text-body-secondary">隱私權政策</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('user_agreement') }}" class="nav-link p-0 text-body-secondary">使用者合約</a></li>
+        <li class="nav-item mb-2"><a href="{{ url_for('refund_policy') }}" class="nav-link p-0 text-body-secondary">退款政策</a></li>
+      </ul>
+
+
+{# Modal #}
+<div class="modal fade" id="FAQModal" tabindex="-1" aria-labelledby="FAQModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="FAQModalLabel">New message</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+</footer>
+</div>
