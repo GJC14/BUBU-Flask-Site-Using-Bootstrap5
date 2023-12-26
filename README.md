@@ -29,8 +29,8 @@ As of 2023/11/26, GCP offers monthly free Compute Engine e2-micro Instance in th
 
 I put my Ubuntu in us-west1-c, using e2-micro + 30GB standard(Please remember to change your storage type). You could also install WordPress directly from Marketplace, remember to set the spec to cater to free tier.  
 You should enable HTTP and HTTPS lest Let's Encrypt couldn't connect to your isntance.
-<img width="1122" alt="截圖 2023-11-26 下午5 08 04" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/d7576a9f-f017-483b-902e-8ca4141c8664">
-<img width="1123" alt="截圖 2023-11-26 下午5 07 24" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/6c0112ef-2f7b-4d81-b6fe-bf4442fb4bf2">
+<img width="1122" alt="截圖 2023-11-26 下午5 08 04" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/e348c04c-1a34-47f5-87f3-1b15793b9a31">
+<img width="1123" alt="截圖 2023-11-26 下午5 07 24" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/46c6b554-0f19-4d58-a1fd-4962df5880d5">
 
 # 2. SSH into your instance
 At your ~$ (which default to be your google account name) you could put your files here. I had put my flask here.
