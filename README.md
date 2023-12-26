@@ -1,5 +1,4 @@
-<img width="945" alt="截圖 2023-11-26 下午6 30 36" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/dbc13c4a-2ee2-48da-8189-d7edb67d0982"># BUBU_Website
-This is a Flask website hosting on GCP, designed with Bootstrap.
+# This is a Flask website hosting on GCP, designed with Bootstrap.
 
 # Hosting a Flask Web on GCP for Free
 This is a working Official Website running on GCP with Ubuntu. Flask, Gunicorn, NGINX, Let's Encrypt SSL used in backend. Frontend using Bootstrap, Javascript, CSS and HTML.
