@@ -3,7 +3,7 @@
 # Hosting a Flask Web on GCP for Free
 This is a working Official Website running on GCP with Ubuntu. Flask, Gunicorn, NGINX, Let's Encrypt SSL used in backend. Frontend using Bootstrap, Javascript, CSS and HTML.
 # Go through
-<img width="3180" alt="How Internet Route to Your Web" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/87c2f576-1241-4b60-b8fe-8f487dd1b49f">
+<img width="3180" alt="How Internet Route to Your Web" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/aa135905-6460-4688-8148-b296af7dee84">  
 
 # 1. GCP Free Tier
 https://cloud.google.com/free/docs/free-cloud-features?hl=zh-tw
@@ -92,7 +92,6 @@ server {
         server_name test.com;
 }
 ```
-<img width="1470" alt="截圖 2023-11-26 下午6 54 54" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/6f4e5522-4433-49b2-aef7-8590112ababa">  
 <img width="948" alt="截圖 2023-11-26 下午6 58 00" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/850b51c9-565a-4458-8e6b-47cb9aafe0e0">  
 
 ## 4.4 Link your configuration from available to enabled.  
@@ -119,7 +118,6 @@ Follow the instruction from official website, in my case, I'm using NGINX with U
 <img width="832" alt="截圖 2023-11-26 下午7 26 45" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/8d6e6f3a-d9ac-4976-a495-4d0f12fefde7">  
 
 We could see that the previous my_test_website.com has been revised by certbot, with new lines with # in the end. It first redirect 80 port to 443 port, or return 404 for 80  
-<img width="1470" alt="截圖 2023-11-26 下午7 32 24" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/42b403ba-1709-4b8c-be4b-d54cf5b73739">
 <img width="723" alt="截圖 2023-11-26 下午7 37 43" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/41dfda42-5da7-49ce-a225-bf0b17f0dd3c">
 
 # 6. Using Gunicorn to run flask
@@ -137,7 +135,6 @@ Add location in 443 of my_test_website.com, which return to http://localhost:505
     }
 ```
 ```sudo systemctl restart nginx```
-<img width="1468" alt="截圖 2023-11-26 下午8 08 06" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/48011bce-4270-44ef-bae6-0b2827839424">
 
 ## 6.2 Install Gunicorn and test running on port 5050
 Install Gunicorn  
@@ -147,12 +144,10 @@ Route to where your app.py locate
 Run Gunicorn with 3 workers binding port 5050  
 ```gunicorn --workers 3 --bind 127.0.0.1:5050 app:app```  
 <img width="683" alt="截圖 2023-11-26 下午8 57 03" src="https://github.com/GJC14/BUBU-Flask-Site-Using-Bootstrap5/assets/136115556/83b12840-bdc5-4470-809b-b030bec24ea4">
-<img width="1470" alt="test_success" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/f4a7d2b5-f4c8-4352-a472-07b025285939">
 
 
 # 7. Pack all of your server to systemd
-Lastly, you probably wouldn't like to start gunicorn everytime, and prefer run it in the background, thus last step is to pack the gunicorn to systemd.  
-<img width="1395" alt="截圖 2023-11-26 下午9 01 44" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/93347601-b7b5-4de9-a9f1-df50d47e809d">  
+Lastly, you probably wouldn't like to start gunicorn everytime, and prefer run it in the background, thus last step is to pack the gunicorn to systemd.   
 ```sudo vim /etc/systemd/system/my_web.service```  
 Type in your username(default default to be your google account name, and should be same as your ~$ foldername).  
 ```
@@ -205,10 +200,8 @@ sudo systemctl reload nginx
 
 # (extra) . SSH througn VSCode
 You could use Remote SSH on VSCode  
-<img width="1022" alt="截圖 2023-11-26 下午9 20 56" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/41648efc-a5bd-4184-ac80-e161064be803">  
 
-## e.1 Open SSH Configuration, which locate in /Users/username/.ssh/config  
-<img width="1021" alt="截圖 2023-11-26 下午9 21 29" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/23077332-5ef2-49c2-9144-fabfdd16dde0">  
+## e.1 Open SSH Configuration, which locate in /Users/username/.ssh/config   
 
 ## e.2 Configure SSH
 With  
@@ -232,12 +225,10 @@ Remember to put your key to where IdentityFile points to.
 
 ## e.4 Put it on GCP
 In your Compute Engine>Edit>Add your public key  
-<img width="649" alt="截圖 2023-11-26 下午9 44 22" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/ca4f0d36-c368-4dd8-880f-268ac9fc3bb2">
 
 ## e.5 There you go
 In VSCode using >Remote-SSH Connect to Host  
 Here you could open a folder just like on your own laptop.  
-<img width="1023" alt="截圖 2023-11-26 下午9 50 09" src="https://github.com/GJC14/Flask_Web_GCP/assets/136115556/5a0de6fd-98db-4a30-9e85-d0b2053b3888">
 
 You could refer to this video, such a clear video.
 https://www.youtube.com/watch?v=0Bjx3Ra8PRM
